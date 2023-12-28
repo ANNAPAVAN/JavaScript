@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evenet Listener</title>
+</head>
+<body>
+    <h1>Learning Event Listener</h1>
+    <p id="js">Evenet Listener</p>
+    <script>
+        // // targetting whole window/document , where ever u click , it will be responded
+        document.addEventListener("click",hello) // parameter1 :-> name of event & parameter:-> to whom should i call (function)
+        function hello(){
+            document.getElementById("js").innerText = "Mouse Clicked"
+        }
+
+
+        // document.addEventListener("dblclick",hello) // parameter1 :-> name of event & parameter:-> to whom should i call (function)
+        // function hello(){
+        //     document.getElementById("js").innerText = "Mouse Double Clicked"
+        // }
+
+            // document.addEventListener('mouseenter',hello1)
+            // function hello1(){
+            //     document.getElementById("js").innerText = "Mouse Entered"
+            // }
+
+
+
+        /*
+            click 
+            dblclick
+            mouseenter
+            mouseleave
+            mouseover
+            input
+            keydown
+            keyup
+            keypress
+            onload
+            resize
+            .....................
+        */
+    </script>
+</body>
+</html>

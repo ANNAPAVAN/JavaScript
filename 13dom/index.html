@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello JavaScript</h1>
+    <ul>
+
+    </ul>
+    <button onclick="maths()" id="sbtn">Submit</button>
+    <p id="js"></p>
+    <script>
+        // insert innerHTML 
+        // -------------------------------------------------
+        const list = `
+            <li>anna</li>
+            <li>pavan</li>
+            <li>Little</li>
+            <li>Kmit</li>
+        `;
+        const ul = document.querySelector('ul')
+        ul.innerHTML = list;
+
+
+        // Create element Dynamically onScreen
+        // -----------------------------------------------
+        let title = document.createElement("h1")
+        title.className = "title1"
+        title.style.fontSize = "25px"
+        title.style.color = "green"
+        title.textContent = "Creating new element in DOM"
+        // console.log(title)  //<h1 class="title1" style="font-size:25px; color:green;">Creating new element in DOM</h1>
+        document.body.appendChild(title)
+
+        // work on removeChild
+
+
+        // for Loop
+        // ----------------------------------------------------
+        for(let i=0;i<3;i++){
+            let para = document.createElement("p")
+            para.className = "fsjs"
+            para.style.fontSize = "16px"
+            para.style.color = "blue"
+            para.textContent = i;
+            // console.log(para)
+            document.body.appendChild(para)
+        }
+
+        // -------------------------------------------------------
+        function maths(){
+            let value = prompt("Solver This 50-30");
+            if(value==20){
+                document.getElementById("js").innerHTML = "<h3>Corret</h3>"
+                document.getElementById("sbtn").style.backgroundColor="green"
+            }else{
+                document.getElementById("js").innerHTML = "<h3>In-Corret Try Again</h3>"
+                document.getElementById("sbtn").style.backgroundColor="red"
+
+            }
+        }
+
+
+    </script>
+</body>
+</html>
